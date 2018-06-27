@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>test</title>
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,maximum-scale=1.0, user-scalable=0" >
+    <meta name="keywords" content="{{keywords}}">
+    <meta name="description" content="{{description}}">
+    <meta name="theme-color" content="#f60">
+    <meta http-equiv="x-dns-prefetch-control" content="off">
+  <body>
+    <script>
+     var single = (function() {
+         var obj = null
+         function Obj() {
+             return {
+                 f1:function() {
+                   console.log('aaaaaaaaaa')
+                 },
+                 f2:function(){
+                     console.log('bbbbbbbb')
+                 }
+             }
+         }
+         function install(){
+             if(obj===null) {
+                 return new Obj()
+             }
+         }
+         return install();
+     })()
+     console.log(single.f1(),single.f2())
+    </script>
+  </body>
+</html>
