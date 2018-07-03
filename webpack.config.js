@@ -25,6 +25,9 @@ module.exports = {
                     'sass-loader'
                 ]
             })
+        },{
+            test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+            loader: 'url-loader'
         }]
     },
     devtool: 'eval-source-map',
