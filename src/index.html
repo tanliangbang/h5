@@ -21,18 +21,21 @@
         <img class="yuyue" src="./img/img_zhuce.png"/>
          <div class="from">
            <div class="nomalInput">
-               <input type="text" placeholder="输入手机号码"/>
+               <input class="phone" type="text" placeholder="输入手机号码"/>
            </div>
            <div class="codeInput">
-             <input type="text" placeholder="输入验证码" />
-             <span>获取验证码</span>
+             <input class="code" type="text" placeholder="输入验证码" />
+             <span class="getCodeBtn">获取验证码</span>
            </div>
              <div class="nomalInput">
-                 <input type="text" placeholder="输入登录密码"/>
+                 <input class="password" type="password" placeholder="输入密码(数组和字母组合)"/>
              </div>
-             <div class="error">验证码错误</div>
-             <div class="submit">
-                 <button>免费注册</button>
+             <div class="error hide">验证码错误</div>
+             <div class="submit none pass">
+                 <button class="ok">免费注册</button>
+             </div>
+             <div class="submit unpass">
+                 <button class="no">免费注册</button>
              </div>
          </div>
          <div class="logo">
@@ -49,6 +52,10 @@
          <div class="bottom">
             <img src="./img/img_dibu.png"/>
          </div>
+     </div>
+     <div class="success none">
+         <img src="./img/img_kouhao2.png"/>
+         <img src="./img/code.png"/>
      </div>
   </body>
 </html>

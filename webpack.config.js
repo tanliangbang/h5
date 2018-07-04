@@ -34,7 +34,13 @@ module.exports = {
     devServer: {
         contentBase: "./src",//本地服务器所加载的页面所在的目录
         historyApiFallback: true,//不跳转
-        inline: true//实时刷新
+        inline: true,//实时刷新
+        proxy: {
+            '/api': {
+                target: 'http://154.48.249.19:8300',
+                secure: false
+            }
+        }
     },
     plugins: [
         new webpack.BannerPlugin('版权所有，翻版必究'),
